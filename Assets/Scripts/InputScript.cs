@@ -6,13 +6,16 @@ public class InputScript : MonoBehaviour
 {
 
     Collider2D clickArea;
+    Collider2D wireArea;
     bool output = false;
     SpriteRenderer circleSprite;
+    public Object wireObject;
 
     // Start is called before the first frame update
     void Start()
     {
-        clickArea =GetComponent<CircleCollider2D>();
+        clickArea = GetComponent<CircleCollider2D>();
+        wireArea = GetComponentInChildren<CircleCollider2D>();
         circleSprite = GetComponentInChildren<SpriteRenderer>();
     }
 
@@ -37,15 +40,13 @@ public class InputScript : MonoBehaviour
                 }
                 
             }
+            
         }
-
         if (Input.GetMouseButton(0))
         {
-            if (clickArea.OverlapPoint(mousePos))
+            if (wireArea.OverlapPoint(mousePos))
             {
-                Debug.Log("Holding");
-                transform.position = mousePos;
-
+                Instantiate(wireObject);
             }
         }
     }
