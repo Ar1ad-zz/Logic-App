@@ -356,6 +356,44 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
+--- !u!1 &1103285485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 404845560215122830, guid: 1b530cc06d58ee644a67ef78c3c7cded, type: 3}
+  m_PrefabInstance: {fileID: 404845558960923680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1103285488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103285485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34eab7ffaf864284cb67615af640dd0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signalInput: {fileID: 0}
+  signal: 0
+--- !u!1 &1800001766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 404845559845590355, guid: 1b530cc06d58ee644a67ef78c3c7cded, type: 3}
+  m_PrefabInstance: {fileID: 404845558960923680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1800001769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800001766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34eab7ffaf864284cb67615af640dd0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signalInput: {fileID: 0}
+  signal: 0
 --- !u!1001 &404845558960923680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -468,5 +506,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Input
       objectReference: {fileID: 0}
+    - target: {fileID: 7326673606136411647, guid: 596651904d011d54991b415b1cdecee0, type: 3}
+      propertyPath: wireObject
+      value: 
+      objectReference: {fileID: 268030946}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 596651904d011d54991b415b1cdecee0, type: 3}

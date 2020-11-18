@@ -7,9 +7,13 @@ public class InputScript : MonoBehaviour
 
     Collider2D clickArea;
     Collider2D wireArea;
-    bool output = false;
+    bool outputsignal = false;
     SpriteRenderer circleSprite;
     public Object wireObject;
+    public GameObject output;
+
+    //other node
+    S_nodeInput hitScript;
 
     // Start is called before the first frame update
     void Start()
@@ -22,32 +26,56 @@ public class InputScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButtonDown(0))
         {
             if (clickArea.OverlapPoint(mousePos))
             {
-                Debug.Log("Clicked");
-                if (!output)
+                
+                if (!outputsignal)
                 {
-                    output = true;
+                    outputsignal = true;
                     circleSprite.color = Color.red;
                 }
                 else
                 {
-                    output = false;
+                    outputsignal = false;
                     circleSprite.color = Color.black;
                 }
                 
             }
             
         }
-        if (Input.GetMouseButton(0))
+
+        // select wireconnector and instantiate wire
+        //if (wireArea.OverlapPoint(mousePos))
+        //{
+        //    if (Input.GetMouseButton(0))
+        //    {
+        //        Instantiate(wireObject);
+        //    }
+
+        //}
+
+        RaycastHit2D hit = new RaycastHit2D();
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if(Physics2D.Raycast(ray.origin, ray.direction))
         {
-            if (wireArea.OverlapPoint(mousePos))
+            hit = Physics2D.Raycast(ray.origin, ray.direction);
+            if (!Input.GetMouseButtonDown(0))
             {
-                Instantiate(wireObject);
+                hitScript = hit.transform.GetComponent<S_nodeInput>();
+                
+                Collider2D col = hit.transform.GetComponent<CircleCollider2D>();
+                Debug.Log(col + ",  " + col.name);
             }
+            
         }
+
+        hitScript.signal = outputsignal;
+        Debug.Log("output: " + outputsignal);
+
+
     }
 }

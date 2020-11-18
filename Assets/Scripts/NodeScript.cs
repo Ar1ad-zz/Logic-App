@@ -5,6 +5,7 @@ using UnityEngine;
 public class NodeScript : MonoBehaviour
 {
     Collider2D col;
+    bool isHolding = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,14 +16,27 @@ public class NodeScript : MonoBehaviour
     void Update()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
+
+        
+
         if (Input.GetMouseButton(0))
         {
+            //Debug.Log(isHolding);
+            //Debug.Log("Holding");
             if (col.OverlapPoint(mousePos))
             {
-                Debug.Log("Holding");
-                transform.position = mousePos;
-
+                isHolding = true;
             }
+            if (isHolding)
+            {
+                transform.position = mousePos;  
+            }
+
+        }
+        else
+        {
+            isHolding = false;
         }
     }
 }
