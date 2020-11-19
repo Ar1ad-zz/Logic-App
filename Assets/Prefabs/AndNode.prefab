@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 1800001769}
   m_Layer: 0
   m_Name: NodeInput (1)
-  m_TagString: Untagged
+  m_TagString: InputNode
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34eab7ffaf864284cb67615af640dd0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signalInput: {fileID: 0}
+  connectedWire: {fileID: 0}
   signal: 0
 --- !u!1 &404845560009785316
 GameObject:
@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 1103285488}
   m_Layer: 0
   m_Name: NodeInput
-  m_TagString: Untagged
+  m_TagString: InputNode
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34eab7ffaf864284cb67615af640dd0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signalInput: {fileID: 0}
+  connectedWire: {fileID: 0}
   signal: 0
 --- !u!1 &404845560344767738
 GameObject:

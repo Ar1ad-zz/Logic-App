@@ -54,7 +54,7 @@ public class InputScript : MonoBehaviour
             }
         }
         
-        Debug.Log("output: " + outputsignal);
+        //Debug.Log("output: " + outputsignal);
         outputSignalScript.signal = outputsignal;
     }
 }

@@ -10,7 +10,7 @@ public class Connector : MonoBehaviour
     bool wireSpawned = false;
     bool isHolding = false;
     RaycastHit2D hit;
-    SignalHolder hitScript;
+    public SignalHolder hitScript;
     Collider2D col;
 
     // Start is called before the first frame update
@@ -46,11 +46,15 @@ public class Connector : MonoBehaviour
                     hit = Physics2D.Raycast(ray.origin, ray.direction);
                     if (!Input.GetMouseButtonDown(0))
                     {
-                        hitScript = hit.transform.GetComponent<SignalHolder>();
+                        //Checks For InputNode Tag
+                        if(hit.collider.CompareTag("InputNode")){
+                            hitScript = hit.transform.GetComponent<SignalHolder>();
 
-                        Collider2D col = hit.transform.GetComponent<CircleCollider2D>();
+                            Collider2D col = hit.transform.GetComponent<CircleCollider2D>();
                         
-                        Debug.Log(col + ",  " + col.name);
+                            Debug.Log(col + ",  " + col.name);
+                        }
+                        
                     }
                 }
             }
@@ -64,10 +68,20 @@ public class Connector : MonoBehaviour
         wireGameObject.GetComponent<LineRenderer>().SetPosition(0, transform.position);
         wireGameObject.GetComponent<LineRenderer>().SetPosition(1, hit.transform.position);
 
+        // Check for existing wire
 
+        // --||||Kind Of Works||||--
+        if(hitScript.connectedWire == null){
+            
+            hitScript.connectedWire = gameObject;
+        }
+
+        // Checks if connectedwire on Input is THIS wire
+        if(hitScript.connectedWire == gameObject){
         // direct the signal
         hitScript.signal = transform.parent.GetComponent<OutputSignal>().signal;
-
+            
+        }
         // change colors
         if (transform.parent.GetComponent<OutputSignal>().signal)
         {

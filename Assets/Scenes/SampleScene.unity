@@ -616,6 +616,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OutputNode
       objectReference: {fileID: 0}
+    - target: {fileID: 3071166532713599312, guid: 624d46e36dd6b70489fed95881598b4a, type: 3}
+      propertyPath: m_TagString
+      value: InputNode
+      objectReference: {fileID: 0}
     - target: {fileID: 3071166532713599318, guid: 624d46e36dd6b70489fed95881598b4a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6
