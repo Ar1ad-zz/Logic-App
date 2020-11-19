@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wireObject: {fileID: 6007255725558751713, guid: 0de5baa320200de4a88731423cac9364, type: 3}
+  hitScript: {fileID: 0}
 --- !u!1 &404845560009785316
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +587,7 @@ Transform:
   m_GameObject: {fileID: 404845560613759253}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 404845560009785317}
   m_RootOrder: 0
@@ -631,7 +632,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 60708ab71a1d7684184c3b860df4dea4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9139e214b646f3141abadc7e0138f8e9, type: 3}
   m_Color: {r: 0.11372547, g: 0.6784314, b: 0.14264752, a: 1}
   m_FlipX: 0
   m_FlipY: 0
