@@ -16,10 +16,6 @@ public class NodeScript : MonoBehaviour
     void Update()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        
-
-        
-
         if (Input.GetMouseButton(0))
         {
             //Debug.Log(isHolding);
@@ -32,7 +28,6 @@ public class NodeScript : MonoBehaviour
             {
                 transform.position = mousePos;  
             }
-
         }
         else
         {

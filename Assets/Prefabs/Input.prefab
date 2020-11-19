@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 60708ab71a1d7684184c3b860df4dea4, type: 3}
   m_Color: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
   m_FlipX: 0
@@ -152,7 +152,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 30940b796de1c034b94cfe47ae3be580, type: 3}
   m_Color: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
   m_FlipX: 0
@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 7326673606136411645}
   - component: {fileID: 7326673606136411644}
   - component: {fileID: 7326673606136411647}
+  - component: {fileID: 5265632335381115239}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -227,6 +228,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75b5623c013fc046afb473ec55a58c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wireArea: {fileID: 0}
+  outputsignal: 0
+  output: {fileID: 0}
+  wireObject: {fileID: 6007255725558751713, guid: 0de5baa320200de4a88731423cac9364, type: 3}
+--- !u!114 &5265632335381115239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7326673606136411646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb62be83a29e28409c8232b842dad9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1 &7326673606434261982
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +418,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4738818917603062011}
+  - component: {fileID: 1040091251}
+  - component: {fileID: 2018642485}
   m_Layer: 0
   m_Name: InputWireConnector
   m_TagString: Untagged
@@ -423,3 +443,32 @@ Transform:
   m_Father: {fileID: 7326673606136411645}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1040091251
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7687635941059732881}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.125
+--- !u!114 &2018642485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7687635941059732881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 313d766f14a121f4da3c747a6daa029a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wireObject: {fileID: 6007255725558751713, guid: 0de5baa320200de4a88731423cac9364, type: 3}
