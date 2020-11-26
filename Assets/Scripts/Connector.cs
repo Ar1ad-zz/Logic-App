@@ -54,27 +54,24 @@ public class Connector : MonoBehaviour
                             //Checks For InputNode Tag
                             if(hit.collider.CompareTag("InputNode"))
                             {
-                                
-                                hitScript = hit.transform.GetComponent<SignalHolder>();
-
-                                Collider2D col = hit.transform.GetComponent<CircleCollider2D>();
-                                isConnected = true;
-                                Debug.Log(col + ",  " + col.name);
+                                if(hit.transform.GetComponent<SignalHolder>().connectedWire == null)
+                                {
+                                    hitScript = hit.transform.GetComponent<SignalHolder>();
+                                    Collider2D col = hit.transform.GetComponent<CircleCollider2D>();
+                                    isConnected = true;
+                                    Debug.Log(col + ",  " + col.name);
+                                }
                             }
-                            
                         }
-                    
                     }
-
                 }
-                
             }
-            
         }
         else
         {
             isHolding = false;
         }
+
         if(Input.GetMouseButtonDown(0))
         {
             if(connectorArea.OverlapPoint(mousePos))
@@ -88,7 +85,6 @@ public class Connector : MonoBehaviour
                 isConnected = false;
                 }
             }
-            
         }
 
         // Update Wire Positions
