@@ -11,6 +11,9 @@ public class SignalHolder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if( connectedWire == null){
+            signal = false;
+        }
         Debug.Log(name + " Signal: " + signal);
     }
 }
